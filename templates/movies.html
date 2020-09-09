@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% block content %}
+    <ul class="collapsible" data-collapsible="accordion">
+        {% for movie in movies %}
+        <li>
+            <div class="collapsible-header">
+
+                <div class=" task_header col s9">
+                    <i class="material-icons">expand_more</i><strong>{{movie.title}}</strong> - {{movie.poster}}
+                </div>
+            </div>
+            <div class="collapsible-body">
+                <span>
+                    {{movie.year}}
+                </span>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
