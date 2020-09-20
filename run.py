@@ -11,9 +11,9 @@ mongo = PyMongo(app)
 
 
 @app.route('/')
-@app.route('/get_tasks')
-def get_tasks():
-    return render_template("index.html", tasks=mongo.db.movies.find())
+@app.route('/get_movies')
+def get_movies():
+    return render_template("movies.html", movies=mongo.db.movies.find())
 
 
 if __name__ == '__main__':
